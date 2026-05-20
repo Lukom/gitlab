@@ -27,7 +27,7 @@ class Gitlab::Client
     # @param  [String] slug The slug (a unique string) of the wiki page
     # @return [Gitlab::ObjectifiedHash]
     def wiki(project, slug)
-      get("/projects/#{url_encode project}/wikis/#{slug}")
+      get("/projects/#{url_encode project}/wikis/#{url_encode slug}")
     end
 
     # Creates a new wiki page for the given repository with the given title, slug, and content.
